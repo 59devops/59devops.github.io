@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T06:23:11.431Z</updated>
+  <updated>2019-09-27T06:30:37.929Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下Homebrew的安装与使用</title>
+    <link href="http://yoursite.com/2019/09/27/Mac%E4%B8%8BHomebrew%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/09/27/Mac下Homebrew的安装与使用/</id>
+    <published>2019-09-27T06:29:49.000Z</published>
+    <updated>2019-09-27T06:30:37.929Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Homebrew是什么？"><a href="#Homebrew是什么？" class="headerlink" title="Homebrew是什么？"></a>Homebrew是什么？</h3><p>官方解释：<br>Homebrew是以最简单，最灵活的方式来安装苹果公司在MacOS中不包含的UNIX工具。 </p><a id="more"></a><h3 id="Homebrew-怎么安装-？怎么卸载-？"><a href="#Homebrew-怎么安装-？怎么卸载-？" class="headerlink" title="Homebrew 怎么安装 ？怎么卸载 ？"></a>Homebrew 怎么安装 ？怎么卸载 ？</h3><ol><li>安装，打开终端，复制粘贴，大约1分钟左右，下载完成，过程中需要输入密码，其他无需任何操作：</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure><ol><li>卸载，有安装就要有卸载，打开终端，复制粘贴：</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"</span><br></pre></td></tr></table></figure><h3 id="Homebrew-怎么使用？常用命令有哪些？"><a href="#Homebrew-怎么使用？常用命令有哪些？" class="headerlink" title="Homebrew 怎么使用？常用命令有哪些？"></a>Homebrew 怎么使用？常用命令有哪些？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装软件，如：brew install oclint</span><br><span class="line">卸载软件，如：brew uninstall oclint</span><br><span class="line">搜索软件，如：brew search oclint</span><br><span class="line">更新软件，如：brew upgrade oclint</span><br><span class="line">查看安装列表， 如：brew list</span><br><span class="line">更新Homebrew，如：brew update</span><br></pre></td></tr></table></figure><h3 id="安装wget命令"><a href="#安装wget命令" class="headerlink" title="安装wget命令"></a>安装wget命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install wget --with-libressl</span><br></pre></td></tr></table></figure><h3 id="安装ftp客户端"><a href="#安装ftp客户端" class="headerlink" title="安装ftp客户端"></a>安装ftp客户端</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install telnet </span><br><span class="line">brew install inetutils </span><br><span class="line">brew link --overwrite inetutils</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Homebrew是什么？&quot;&gt;&lt;a href=&quot;#Homebrew是什么？&quot; class=&quot;headerlink&quot; title=&quot;Homebrew是什么？&quot;&gt;&lt;/a&gt;Homebrew是什么？&lt;/h3&gt;&lt;p&gt;官方解释：&lt;br&gt;Homebrew是以最简单，最灵活的方式来安装苹果公司在MacOS中不包含的UNIX工具。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Others" scheme="http://yoursite.com/categories/Others/"/>
+    
+    
+      <category term="Others" scheme="http://yoursite.com/tags/Others/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkins构建完成之后运行脚本可以杀掉TomCat但是起不来的解决方法</title>
