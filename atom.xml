@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T01:05:40.333Z</updated>
+  <updated>2019-09-27T03:41:55.854Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello-hexo</title>
+    <link href="http://yoursite.com/2019/09/27/hello-hexo/"/>
+    <id>http://yoursite.com/2019/09/27/hello-hexo/</id>
+    <published>2019-09-27T03:38:32.000Z</published>
+    <updated>2019-09-27T03:41:55.854Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><p>这是自己写的第一篇文章，希望以后能够坚持写下去！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;第一篇文章&quot;&gt;&lt;a href=&quot;#第一篇文章&quot; class=&quot;headerlink&quot; title=&quot;第一篇文章&quot;&gt;&lt;/a&gt;第一篇文章&lt;/h2&gt;&lt;p&gt;这是自己写的第一篇文章，希望以后能够坚持写下去！！！&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="others" scheme="http://yoursite.com/categories/others/"/>
+    
+    
+      <category term="others" scheme="http://yoursite.com/tags/others/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
