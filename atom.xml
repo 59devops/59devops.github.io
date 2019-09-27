@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T05:47:51.234Z</updated>
+  <updated>2019-09-27T05:51:59.070Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins自定义主题安装</title>
+    <link href="http://yoursite.com/2019/09/27/Jenkins%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85/"/>
+    <id>http://yoursite.com/2019/09/27/Jenkins自定义主题安装/</id>
+    <published>2019-09-27T05:50:54.000Z</published>
+    <updated>2019-09-27T05:51:59.070Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>首先必须先安装<code>Simple Theme Plugin</code>插件</p></li><li><p>在<a href="http://afonsof.com/jenkins-material-theme/网站中生成需要的主题css文件" target="_blank" rel="noopener">http://afonsof.com/jenkins-material-theme/网站中生成需要的主题css文件</a></p></li><li><p>将<code>jenkins-material-theme.css</code>文件上传到Jenkins服务器</p></li><li><p>创建目录，并将css文件放在对应的目录中。Jenkins默认的目录在<code>/var/jenkins_home/</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /var/jenkins_home/userContent/material/</span><br><span class="line">cp jenkins-material-theme.css /var/jenkins_home/userContent/material/</span><br></pre></td></tr></table></figure></li></ul><a id="more"></a><ul><li>在Jenkins中设置</li></ul><p><img src="http://static.staryjie.com/static/images/20190715152354.png" alt></p><ul><li>保存之后会自动重新加载主题</li></ul><p><img src="http://static.staryjie.com/static/images/20190715152442.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先必须先安装&lt;code&gt;Simple Theme Plugin&lt;/code&gt;插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在&lt;a href=&quot;http://afonsof.com/jenkins-material-theme/网站中生成需要的主题css文件&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://afonsof.com/jenkins-material-theme/网站中生成需要的主题css文件&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将&lt;code&gt;jenkins-material-theme.css&lt;/code&gt;文件上传到Jenkins服务器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建目录，并将css文件放在对应的目录中。Jenkins默认的目录在&lt;code&gt;/var/jenkins_home/&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mkdir -p /var/jenkins_home/userContent/material/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp jenkins-material-theme.css /var/jenkins_home/userContent/material/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="Jenkins" scheme="http://yoursite.com/categories/Jenkins/"/>
+    
+    
+      <category term="Jenkins" scheme="http://yoursite.com/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jenkins+GitLab+Ansible-playbook的环境安装(yum)</title>
+    <link href="http://yoursite.com/2019/09/27/Jenkins-GitLab-Ansible-playbook%E7%9A%84%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-yum/"/>
+    <id>http://yoursite.com/2019/09/27/Jenkins-GitLab-Ansible-playbook的环境安装-yum/</id>
+    <published>2019-09-27T05:49:43.000Z</published>
+    <updated>2019-09-27T05:50:34.743Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、安装GitLab"><a href="#1、安装GitLab" class="headerlink" title="1、安装GitLab"></a>1、安装GitLab</h3><h4 id="1-1-配置gitlab的yum源"><a href="#1-1-配置gitlab的yum源" class="headerlink" title="1.1 配置gitlab的yum源"></a>1.1 配置gitlab的yum源</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 参考：https://packages.gitlab.com/gitlab/gitlab-ce/install#bash-rpm</span><br><span class="line">curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh|bash</span><br><span class="line">yum install -y gitlab-ce</span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="1-2-启动GitLab与管理"><a href="#1-2-启动GitLab与管理" class="headerlink" title="1.2 启动GitLab与管理"></a>1.2 启动GitLab与管理</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl reconfigure</span><br><span class="line">gitlab-ctl start</span><br><span class="line">gitlab-ctl status</span><br><span class="line">gitlab-ctl stop</span><br><span class="line">gitlab-ctl restart</span><br><span class="line">ps -aux|grep runsvdir</span><br></pre></td></tr></table></figure><h3 id="2、安装JDK"><a href="#2、安装JDK" class="headerlink" title="2、安装JDK"></a>2、安装JDK</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y java-1.8.0-openjdk</span><br></pre></td></tr></table></figure><h3 id="3、安装Jenkins"><a href="#3、安装Jenkins" class="headerlink" title="3、安装Jenkins"></a>3、安装Jenkins</h3><h4 id="3-1-配置Jenkins的yum源"><a href="#3-1-配置Jenkins的yum源" class="headerlink" title="3.1 配置Jenkins的yum源"></a>3.1 配置Jenkins的yum源</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key</span><br></pre></td></tr></table></figure><h4 id="3-2-安装Jenkins"><a href="#3-2-安装Jenkins" class="headerlink" title="3.2 安装Jenkins"></a>3.2 安装Jenkins</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y jenkins</span><br></pre></td></tr></table></figure><h4 id="3-3-启动jenkins"><a href="#3-3-启动jenkins" class="headerlink" title="3.3 启动jenkins"></a>3.3 启动jenkins</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl start jenkins</span><br><span class="line">systemctl enable jenkins</span><br><span class="line">systemctl status jenkins</span><br></pre></td></tr></table></figure><h4 id="3-4-修改Jenkins配置文件"><a href="#3-4-修改Jenkins配置文件" class="headerlink" title="3.4 修改Jenkins配置文件"></a>3.4 修改Jenkins配置文件</h4><h5 id="3-4-1-修改Jenkins运行用户"><a href="#3-4-1-修改Jenkins运行用户" class="headerlink" title="3.4.1 修改Jenkins运行用户"></a>3.4.1 修改Jenkins运行用户</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/jenkins</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 修改$JENKINS_USER，并去掉当前行的注释</span><br><span class="line"><span class="meta">$</span>JENKINS_USER='work'</span><br></pre></td></tr></table></figure><h5 id="3-4-2-修改Jenkins相关文件夹用户权限"><a href="#3-4-2-修改Jenkins相关文件夹用户权限" class="headerlink" title="3.4.2 修改Jenkins相关文件夹用户权限"></a>3.4.2 修改Jenkins相关文件夹用户权限</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chown -R work:work /var/lib/jenkins</span><br><span class="line">chown -R work:work /var/cache/jenkins</span><br><span class="line">chown -R work:work /var/log/jenkins</span><br></pre></td></tr></table></figure><h5 id="3-4-3-重启Jenkins服务并检查运行Jenkins的用户是否已经切换为work"><a href="#3-4-3-重启Jenkins服务并检查运行Jenkins的用户是否已经切换为work" class="headerlink" title="3.4.3 重启Jenkins服务并检查运行Jenkins的用户是否已经切换为work"></a>3.4.3 重启Jenkins服务并检查运行Jenkins的用户是否已经切换为work</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart jenkins</span><br><span class="line">ps -ef|grep jenkins</span><br></pre></td></tr></table></figure><h4 id="3-5-Jenkins插件推荐"><a href="#3-5-Jenkins插件推荐" class="headerlink" title="3.5 Jenkins插件推荐"></a>3.5 Jenkins插件推荐</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.Git Parameter# 构建参数</span><br><span class="line">2.build-name-setter# $&#123;BUILD_NUMBER&#125;-$moudle-$release_tag</span><br><span class="line">3.user build vars plugin# 获取运行job的用户名</span><br><span class="line">4.Jenkins修改本地默认主题</span><br><span class="line">主题URL：http://afonsof.com/jenkins-material-theme/</span><br><span class="line">1) Jenkins安装 Simple Theme插件</span><br><span class="line">2) 浏览器下载stylish css导入服务器。放到 /var/cache/jenkins/war/css</span><br><span class="line">3) 然后在Jenkins的系统配置中添加Theme配置 http://10.0.0.100:8080/css/jenkins-material-theme.css</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、安装GitLab&quot;&gt;&lt;a href=&quot;#1、安装GitLab&quot; class=&quot;headerlink&quot; title=&quot;1、安装GitLab&quot;&gt;&lt;/a&gt;1、安装GitLab&lt;/h3&gt;&lt;h4 id=&quot;1-1-配置gitlab的yum源&quot;&gt;&lt;a href=&quot;#1-1-配置gitlab的yum源&quot; class=&quot;headerlink&quot; title=&quot;1.1 配置gitlab的yum源&quot;&gt;&lt;/a&gt;1.1 配置gitlab的yum源&lt;/h4&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt; 参考：https://packages.gitlab.com/gitlab/gitlab-ce/install#bash-rpm&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh|bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yum install -y gitlab-ce&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Jenkins" scheme="http://yoursite.com/categories/Jenkins/"/>
+    
+    
+      <category term="Jenkins" scheme="http://yoursite.com/tags/Jenkins/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker构建持续集成环境</title>
