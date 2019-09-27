@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[pyecharts报错'pyecharts' has no attribute 'Bar'的解决办法]]></title>
+    <url>%2F2019%2F09%2F27%2Fpyecharts%E6%8A%A5%E9%94%99-pyecharts-has-no-attribute-Bar-%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[pyecharts报错’pyecharts’ has no attribute ‘Bar’的解决办法1、出错原因因为用下面语句安装pyecharts时，默认会安装最新版本的pyecharts，python解释器版本更新的速度慢很多，现在的python解释器默认的是与0.1.9.4版本的pyecharts配合，你安装最新的，python解释器不能识别，所以会报错。 1pip install pyecharts 2、解决方法1234# 1.先安装wheelpip install wheel# 2.再安装pyecharts0.1.9.4版本pip install pyecharts==0.1.9.4 3、验证123456from pyecharts import Barbar1 = Bar("我的第一个图表", "副标题")bar1.add("服装", ['衬衣', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'], [5, 20, 36, 10, 75, 90])bar1.show_config()bar1.render() 运行上面的代码会生成如下的render.html文件： 在浏览器打开：]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>pyecharts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[pipenv简单使用]]></title>
     <url>%2F2019%2F09%2F27%2Fpipenv%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[pipenv 是 Pipfile 主要倡导者、requests 作者 Kenneth Reitz 写的一个命令行工具，主要包含了Pipfile、pip、click、requests和virtualenv。Pipfile和pipenv本来都是Kenneth Reitz的个人项目，后来贡献给了pypa组织。Pipfile是社区拟定的依赖管理文件，用于替代过于简陋的 requirements.txt 文件。 1、安装pipenv 参考：https://github.com/pypa/pipenv 1.1 pip安装1pip install pipenv 1.2 Mac通过brew安装1brew install pipenv 2、pipenv简单使用2.1 创建虚拟环境1234# 进入项目目录cd projectdir# 创建虚拟环境pipenv install 上面的命令会自动在~/.local/share/virtualenvs/目录下创建一个projectdir加一串随机字符串的虚拟环境目录。 2.2 创建指定python版本的虚拟环境1234# 指定python版本为3.6.5pipenv install --python 3.6.5# 或者pipenv --python 3.6.5 2.3 修改pipenv默认虚拟环境位置为当前目录下12# 设置环境变量PIPENV_VENV_IN_PROJECT=1export export PIPENV_VENV_IN_PROJECT=1 在初始化虚拟环境的时候，pipenv默认会把虚拟环境的python目录以 及后来安装的各种模块放到/home/$username/.local/share/virtualenvs里，一般/和home是在一个分区的(之前就遇到过/所在的分区写满了，整个服务器都挂掉了)，如果想放到其他地方可以有以下几种方法： export PIPENV_VENV_IN_PROJECT=1 设置这个环境变量，pipenv会在当前目录下创建.venv的目录，以后都会把模块装到这个.venv下。 自己在项目目录下手动创建.venv的目录，然后运行 pipenv run 或者 pipenv shell pipenv都会在.venv下创建虚拟环境。 设置WORKON_HOME到其他的地方 （如果当前目录下已经有.venv,此项设置失效）。 2.4 激活虚拟环境1pipenv shell 2.5 安装相关模块并加入到Pipfile123pipenv install packagename# 比如pipenv install flask 2.6 安装固定版本模块并加入到Pipfile1pipenv install django==1.11 2.7 显示虚拟环境信息1pipenv --venv 2.8 显示目录信息1pipenv --where 2.9 显示Python解释器信息1pipenv --py 2.10 查看目前安装的库及其依赖1pipenv graph 2.11 检查安全漏洞1pipenv check 2.12 卸载全部包1pipenv uninstall --all 3、设置pipenv安装源为国内源修改当前目录下Pipfile文件，将[source]下的url属性改成国内的源即可： 1234[[source]]url = &quot;https://mirrors.aliyun.com/pypi/simple&quot;verify_ssl = truename = &quot;pypi&quot;]]></content>

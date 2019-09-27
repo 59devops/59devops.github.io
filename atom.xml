@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T05:07:55.413Z</updated>
+  <updated>2019-09-27T05:31:57.735Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyecharts报错&#39;pyecharts&#39; has no attribute &#39;Bar&#39;的解决办法</title>
+    <link href="http://yoursite.com/2019/09/27/pyecharts%E6%8A%A5%E9%94%99-pyecharts-has-no-attribute-Bar-%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/09/27/pyecharts报错-pyecharts-has-no-attribute-Bar-的解决办法/</id>
+    <published>2019-09-27T05:30:38.000Z</published>
+    <updated>2019-09-27T05:31:57.735Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="pyecharts报错’pyecharts’-has-no-attribute-‘Bar’的解决办法"><a href="#pyecharts报错’pyecharts’-has-no-attribute-‘Bar’的解决办法" class="headerlink" title="pyecharts报错’pyecharts’ has no attribute ‘Bar’的解决办法"></a>pyecharts报错’pyecharts’ has no attribute ‘Bar’的解决办法</h2><h3 id="1、出错原因"><a href="#1、出错原因" class="headerlink" title="1、出错原因"></a>1、出错原因</h3><p>因为用下面语句安装<code>pyecharts</code>时，默认会安装最新版本的<code>pyecharts</code>，python解释器版本更新的速度慢很多，现在的python解释器默认的是与0.1.9.4版本的<code>pyecharts</code>配合，你安装最新的，python解释器不能识别，所以会报错。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyecharts</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="2、解决方法"><a href="#2、解决方法" class="headerlink" title="2、解决方法"></a>2、解决方法</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 1.先安装wheel</span><br><span class="line">pip install wheel</span><br><span class="line"><span class="meta">#</span> 2.再安装pyecharts0.1.9.4版本</span><br><span class="line">pip install pyecharts==0.1.9.4</span><br></pre></td></tr></table></figure><h3 id="3、验证"><a href="#3、验证" class="headerlink" title="3、验证"></a>3、验证</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar</span><br><span class="line"></span><br><span class="line">bar1 = Bar(<span class="string">"我的第一个图表"</span>, <span class="string">"副标题"</span>)</span><br><span class="line">bar1.add(<span class="string">"服装"</span>, [<span class="string">'衬衣'</span>, <span class="string">'羊毛衫'</span>, <span class="string">'雪纺衫'</span>, <span class="string">'裤子'</span>, <span class="string">'高跟鞋'</span>, <span class="string">'袜子'</span>], [<span class="number">5</span>, <span class="number">20</span>, <span class="number">36</span>, <span class="number">10</span>, <span class="number">75</span>, <span class="number">90</span>])</span><br><span class="line">bar1.show_config()</span><br><span class="line">bar1.render()</span><br></pre></td></tr></table></figure><p>运行上面的代码会生成如下的render.html文件：</p><p><img src="http://static.staryjie.com/static/images/20190821102409.png" alt></p><p>在浏览器打开：</p><p><img src="http://static.staryjie.com/static/images/20190821102534.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;pyecharts报错’pyecharts’-has-no-attribute-‘Bar’的解决办法&quot;&gt;&lt;a href=&quot;#pyecharts报错’pyecharts’-has-no-attribute-‘Bar’的解决办法&quot; class=&quot;headerlink&quot; title=&quot;pyecharts报错’pyecharts’ has no attribute ‘Bar’的解决办法&quot;&gt;&lt;/a&gt;pyecharts报错’pyecharts’ has no attribute ‘Bar’的解决办法&lt;/h2&gt;&lt;h3 id=&quot;1、出错原因&quot;&gt;&lt;a href=&quot;#1、出错原因&quot; class=&quot;headerlink&quot; title=&quot;1、出错原因&quot;&gt;&lt;/a&gt;1、出错原因&lt;/h3&gt;&lt;p&gt;因为用下面语句安装&lt;code&gt;pyecharts&lt;/code&gt;时，默认会安装最新版本的&lt;code&gt;pyecharts&lt;/code&gt;，python解释器版本更新的速度慢很多，现在的python解释器默认的是与0.1.9.4版本的&lt;code&gt;pyecharts&lt;/code&gt;配合，你安装最新的，python解释器不能识别，所以会报错。&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip install pyecharts&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="pyecharts" scheme="http://yoursite.com/tags/pyecharts/"/>
+    
+  </entry>
   
   <entry>
     <title>pipenv简单使用</title>
