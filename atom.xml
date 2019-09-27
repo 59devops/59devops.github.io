@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T05:58:00.103Z</updated>
+  <updated>2019-09-27T06:05:16.437Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac OS将U盘格式化为ext2/3/4格式</title>
+    <link href="http://yoursite.com/2019/09/27/Mac-OS%E5%B0%86U%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAext2-3-4%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://yoursite.com/2019/09/27/Mac-OS将U盘格式化为ext2-3-4格式/</id>
+    <published>2019-09-27T06:04:35.000Z</published>
+    <updated>2019-09-27T06:05:16.437Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、安装HomeBrew"><a href="#1、安装HomeBrew" class="headerlink" title="1、安装HomeBrew"></a>1、安装HomeBrew</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure><h3 id="2、安装e2fsprogs插件"><a href="#2、安装e2fsprogs插件" class="headerlink" title="2、安装e2fsprogs插件"></a>2、安装e2fsprogs插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install e2fsprogs</span><br></pre></td></tr></table></figure><h3 id="3、找到U盘盘符"><a href="#3、找到U盘盘符" class="headerlink" title="3、找到U盘盘符"></a>3、找到U盘盘符</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br></pre></td></tr></table></figure><p><img src="http://static.staryjie.com/static/images/20190728191811.png" alt></p><h3 id="4、取消U盘挂载"><a href="#4、取消U盘挂载" class="headerlink" title="4、取消U盘挂载"></a>4、取消U盘挂载</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil unmountdisk /dev/disk2</span><br></pre></td></tr></table></figure><h3 id="5、格式化为ext4格式"><a href="#5、格式化为ext4格式" class="headerlink" title="5、格式化为ext4格式"></a>5、格式化为ext4格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext4 /dev/disk2</span><br></pre></td></tr></table></figure><p>回车，输入 Mac 密码再回车，过程需要稍等片刻，等待完成即可拔掉 U盘，这时候 U盘格式已经为 ext4 了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1、安装HomeBrew&quot;&gt;&lt;a href=&quot;#1、安装HomeBrew&quot; class=&quot;headerlink&quot; title=&quot;1、安装HomeBrew&quot;&gt;&lt;/a&gt;1、安装HomeBrew&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Others" scheme="http://yoursite.com/tags/Others/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS 7安装Google Authenticator进行登陆二次验证</title>
