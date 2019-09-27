@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T06:11:15.611Z</updated>
+  <updated>2019-09-27T06:13:35.480Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/09/27/%E8%A7%A3%E5%86%B3zabbix%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%AD%E6%96%87%E5%90%8E%E5%9B%BE%E5%BD%A2%E4%B8%AD%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2019/09/27/解决zabbix设置为中文后图形中中文乱码的问题/</id>
     <published>2019-09-27T06:08:10.000Z</published>
-    <updated>2019-09-27T06:11:15.611Z</updated>
+    <updated>2019-09-27T06:13:35.480Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1、下载汉化的字体"><a href="#1、下载汉化的字体" class="headerlink" title="1、下载汉化的字体"></a>1、下载汉化的字体</h3><p>zabbix3.4中，存放字体的目录在<code>/usr/share/zabbix/fonts/</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="2、修改配置文件"><a href="#2、修改配置文件" class="headerlink" title="2、修改配置文件"></a>2、修改配置文件</h3><p>修改<code>/usr/share/zabbix/include/defines.inc.php</code>文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/share/zabbix/include/defines.inc.php</span><br></pre></td></tr></table></figure><p><img src="http://static.staryjie.com/static/images/20180620140701.png" alt></p><p><img src="http://static.staryjie.com/static/images/20180620140744.png" alt></p><h3 id="3、重启zabbix-server"><a href="#3、重启zabbix-server" class="headerlink" title="3、重启zabbix-server"></a>3、重启zabbix-server</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart zabbix-server.service</span><br></pre></td></tr></table></figure><p><img src="http://static.staryjie.com/static/images/20180620140937.png" alt></p>]]></content>
     
@@ -33,6 +33,8 @@
     </summary>
     
     
+      <category term="zabbix" scheme="http://yoursite.com/categories/zabbix/"/>
+    
     
       <category term="zabbix" scheme="http://yoursite.com/tags/zabbix/"/>
     
@@ -43,7 +45,7 @@
     <link href="http://yoursite.com/2019/09/27/Mac-OS%E5%B0%86U%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BAext2-3-4%E6%A0%BC%E5%BC%8F/"/>
     <id>http://yoursite.com/2019/09/27/Mac-OS将U盘格式化为ext2-3-4格式/</id>
     <published>2019-09-27T06:04:35.000Z</published>
-    <updated>2019-09-27T06:06:18.973Z</updated>
+    <updated>2019-09-27T06:13:25.198Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1、安装HomeBrew"><a href="#1、安装HomeBrew" class="headerlink" title="1、安装HomeBrew"></a>1、安装HomeBrew</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="2、安装e2fsprogs插件"><a href="#2、安装e2fsprogs插件" class="headerlink" title="2、安装e2fsprogs插件"></a>2、安装e2fsprogs插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install e2fsprogs</span><br></pre></td></tr></table></figure><h3 id="3、找到U盘盘符"><a href="#3、找到U盘盘符" class="headerlink" title="3、找到U盘盘符"></a>3、找到U盘盘符</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br></pre></td></tr></table></figure><p><img src="http://static.staryjie.com/static/images/20190728191811.png" alt></p><h3 id="4、取消U盘挂载"><a href="#4、取消U盘挂载" class="headerlink" title="4、取消U盘挂载"></a>4、取消U盘挂载</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil unmountdisk /dev/disk2</span><br></pre></td></tr></table></figure><h3 id="5、格式化为ext4格式"><a href="#5、格式化为ext4格式" class="headerlink" title="5、格式化为ext4格式"></a>5、格式化为ext4格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext4 /dev/disk2</span><br></pre></td></tr></table></figure><p>回车，输入 Mac 密码再回车，过程需要稍等片刻，等待完成即可拔掉 U盘，这时候 U盘格式已经为 ext4 了。</p>]]></content>
     
@@ -53,6 +55,8 @@
     
     </summary>
     
+    
+      <category term="Others" scheme="http://yoursite.com/categories/Others/"/>
     
     
       <category term="Others" scheme="http://yoursite.com/tags/Others/"/>
