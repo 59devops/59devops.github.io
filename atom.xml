@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T06:06:18.973Z</updated>
+  <updated>2019-09-27T06:09:09.006Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决zabbix设置为中文后图形中中文乱码的问题</title>
+    <link href="http://yoursite.com/2019/09/27/%E8%A7%A3%E5%86%B3zabbix%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%AD%E6%96%87%E5%90%8E%E5%9B%BE%E5%BD%A2%E4%B8%AD%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2019/09/27/解决zabbix设置为中文后图形中中文乱码的问题/</id>
+    <published>2019-09-27T06:08:10.000Z</published>
+    <updated>2019-09-27T06:09:09.006Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1、下载汉化的字体"><a href="#1、下载汉化的字体" class="headerlink" title="1、下载汉化的字体"></a>1、下载汉化的字体</h3><p>zabbix3.4中，存放字体的目录在<code>/usr/share/zabbix/fonts/</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="2、修改配置文件"><a href="#2、修改配置文件" class="headerlink" title="2、修改配置文件"></a>2、修改配置文件</h3><p>修改<code>/usr/share/zabbix/include/defines.inc.php</code>文件：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/share/zabbix/include/defines.inc.php</span><br></pre></td></tr></table></figure><p><img src="http://static.staryjie.com/static/images/20180620140701.png" alt></p><p><img src="http://static.staryjie.com/static/images/20180620140744.png" alt></p><h3 id="3、重启zabbix-server"><a href="#3、重启zabbix-server" class="headerlink" title="3、重启zabbix-server"></a>3、重启zabbix-server</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart zabbix-server.service</span><br></pre></td></tr></table></figure><p><img src="http://static.staryjie.com/static/images/20180620140937.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1、下载汉化的字体&quot;&gt;&lt;a href=&quot;#1、下载汉化的字体&quot; class=&quot;headerlink&quot; title=&quot;1、下载汉化的字体&quot;&gt;&lt;/a&gt;1、下载汉化的字体&lt;/h3&gt;&lt;p&gt;zabbix3.4中，存放字体的目录在&lt;code&gt;/usr/share/zabbix/fonts/&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="zabbix" scheme="http://yoursite.com/tags/zabbix/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac OS将U盘格式化为ext2/3/4格式</title>
