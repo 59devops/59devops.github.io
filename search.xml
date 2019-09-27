@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Jenkins构建完成之后运行脚本可以杀掉TomCat但是起不来的解决方法]]></title>
+    <url>%2F2019%2F09%2F27%2FJenkins%E6%9E%84%E5%BB%BA%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E5%8F%AF%E4%BB%A5%E6%9D%80%E6%8E%89TomCat%E4%BD%86%E6%98%AF%E8%B5%B7%E4%B8%8D%E6%9D%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[写了一个重启tomcat的脚本，让jenkins编译、打包、发布时调用。在本地写好重启tomcat的脚本后，本地执行脚本没有问题，但在远程服务器上SSH免密登录执行后。发现可以把TOMCAT杀死，但tomcat却起不来。试了很多次发现都是只能够杀掉Tomcat但是启动不起来。 百度了一下，有人说脚本远程运行的话，远程会话结束以后会把这个子进程干掉。也就是说当Jenkins远程执行完这个脚本之后，这个脚本所衍生的所有子进程都会被杀掉。重启Tomcat的脚本： 1234#重启tomcat服务器pid=`lsof -i:8080|awk 'NR==2&#123;print $2&#125;'`kill -9 $pidsh /home/tomcat/bin/startup.sh &amp; 为了证实这一说法，修改了脚本： 123456#重启tomcat服务器pid=`lsof -i:8080|awk 'NR==2&#123;print $2&#125;'`kill -9 $pidcd /home/tomcat/bin/sh ./startup.shsleep 60 Jenkins再次构建并执行该脚本，发现TomCat启来了，有日志了，也看到端口了，60秒后端口就自动消失了，同时这个不会写到日志里。说明上面关于远程执行的脚本会话结束以后会把这个子进程干掉的说法是成立的。 解决办法在脚本的启动命令前加上nohup ,即如下 1nohup sh /home/tomcat/bin/startup.sh &amp; 或者： 在使用jenkins的时候shell脚本里边加上这一行就行了：BUILD_ID=DONTKILLME 在jenkins中配置自动更新部署项目时，如果采取用execute shell启动/关闭tomcat，会发现可以进行关闭tomcat，但是无法启动tomcat，虽然构建会显示执行成功，但是查看进程，tomcat是没有启动的。这是因为Jenkins默认会在Build结束后Kill掉所有的衍生进程。需要进行以下配置，才能避免此类情况发生:重设环境变量build_id，在execute shell输入框中加入BUILD_ID=DONTKILLME,即可防止jenkins杀死启动的tomcat进程。 12345BUILD_ID=DONTKILLME#重启tomcat服务器pid=`lsof -i:8080|awk 'NR==2&#123;print $2&#125;'`kill -9 $pidsh /home/tomcat/bin/startup.sh &amp; 参考链接：SSH远程启动tomcat后，退出SSH,tomcat也退出jenkins中通过execute shell启动的进程会被杀死的问题]]></content>
+      <categories>
+        <category>Jenkins</category>
+      </categories>
+      <tags>
+        <tag>Jenkins</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[修改mysql时区的三种方法]]></title>
     <url>%2F2019%2F09%2F27%2F%E4%BF%AE%E6%94%B9mysql%E6%97%B6%E5%8C%BA%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[方法一：通过mysql命令行模式下动态修改1.1 查看mysql当前时间，当前时区1234567891011121314&gt; select curtime(); #或select now()也可以+-----------+| curtime() |+-----------+| 15:18:10 |+-----------+&gt; show variables like "%time_zone%";+------------------+--------+| Variable_name | Value |+------------------+--------+| system_time_zone | CST || time_zone | SYSTEM |+------------------+--------+2 rows in set (0.00 sec) time_zone说明mysql使用system的时区，system_time_zone说明system使用CST时区 1.2 修改时区123&gt; set global time_zone = &apos;+8:00&apos;; ##修改mysql全局时区为北京时间，即我们所在的东8区&gt; set time_zone = &apos;+8:00&apos;; ##修改当前会话时区&gt; flush privileges; #立即生效 方法二：通过修改my.cnf配置文件来修改时区123# vim /etc/my.cnf ##在[mysqld]区域中加上default-time_zone = &apos;+8:00&apos;# /etc/init.d/mysqld restart ##重启mysql使新时区生效 方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区这里，以php为例，在mysql_connect()下使用: 1mysql_query(&quot;SET time_zone = &apos;+8:00&apos;&quot;) 这样可以在保证你不重启的情况下改变时区。但是mysql的某些系统函数还是不能用如：now()。这句，还是不能理解。]]></content>
