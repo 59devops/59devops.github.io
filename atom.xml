@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-27T06:30:37.929Z</updated>
+  <updated>2019-09-27T06:43:41.947Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac下安装Anaconda3</title>
+    <link href="http://yoursite.com/2019/09/27/Mac%E4%B8%8B%E5%AE%89%E8%A3%85Anaconda3/"/>
+    <id>http://yoursite.com/2019/09/27/Mac下安装Anaconda3/</id>
+    <published>2019-09-27T06:42:54.000Z</published>
+    <updated>2019-09-27T06:43:41.947Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-下载Anaconda3安装包"><a href="#1-下载Anaconda3安装包" class="headerlink" title="1.下载Anaconda3安装包"></a>1.下载Anaconda3安装包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.0-MacOSX-x86_64.pkg</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><p>正常安装</p><h3 id="3-添加环境变量"><a href="#3-添加环境变量" class="headerlink" title="3.添加环境变量"></a>3.添加环境变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo 'export PATH="~/anaconda3/bin:$PATH"' &gt;&gt; ~/.bash_profile</span><br><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure><h3 id="4-检查"><a href="#4-检查" class="headerlink" title="4.检查"></a>4.检查</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --versions</span><br></pre></td></tr></table></figure><blockquote><p>参考：<br><a href="http://python.jobbole.com/86236/" target="_blank" rel="noopener">Anaconda使用总结 - Python - 伯乐在线</a></p></blockquote><p><a href="https://www.jianshu.com/p/d250a4245d81" target="_blank" rel="noopener">macOS Anaconda 安装和卸载 - 简书</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-下载Anaconda3安装包&quot;&gt;&lt;a href=&quot;#1-下载Anaconda3安装包&quot; class=&quot;headerlink&quot; title=&quot;1.下载Anaconda3安装包&quot;&gt;&lt;/a&gt;1.下载Anaconda3安装包&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.0-MacOSX-x86_64.pkg&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Others" scheme="http://yoursite.com/categories/Others/"/>
+    
+    
+      <category term="Others" scheme="http://yoursite.com/tags/Others/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下Homebrew的安装与使用</title>

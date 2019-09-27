@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Mac下安装Anaconda3]]></title>
+    <url>%2F2019%2F09%2F27%2FMac%E4%B8%8B%E5%AE%89%E8%A3%85Anaconda3%2F</url>
+    <content type="text"><![CDATA[1.下载Anaconda3安装包1wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.0-MacOSX-x86_64.pkg 2.安装正常安装 3.添加环境变量12echo 'export PATH="~/anaconda3/bin:$PATH"' &gt;&gt; ~/.bash_profilesource ~/.bash_profile 4.检查1conda --versions 参考：Anaconda使用总结 - Python - 伯乐在线 macOS Anaconda 安装和卸载 - 简书]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
+      <tags>
+        <tag>Others</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mac下Homebrew的安装与使用]]></title>
     <url>%2F2019%2F09%2F27%2FMac%E4%B8%8BHomebrew%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[Homebrew是什么？官方解释：Homebrew是以最简单，最灵活的方式来安装苹果公司在MacOS中不包含的UNIX工具。 Homebrew 怎么安装 ？怎么卸载 ？ 安装，打开终端，复制粘贴，大约1分钟左右，下载完成，过程中需要输入密码，其他无需任何操作： 1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 卸载，有安装就要有卸载，打开终端，复制粘贴： 1/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" Homebrew 怎么使用？常用命令有哪些？123456安装软件，如：brew install oclint卸载软件，如：brew uninstall oclint搜索软件，如：brew search oclint更新软件，如：brew upgrade oclint查看安装列表， 如：brew list更新Homebrew，如：brew update 安装wget命令1brew install wget --with-libressl 安装ftp客户端123brew install telnet brew install inetutils brew link --overwrite inetutils]]></content>
