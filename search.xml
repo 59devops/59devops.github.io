@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[pyecharts报错'pyecharts' has no attribute 'Bar'的解决办法]]></title>
     <url>%2F2019%2F09%2F27%2Fpyecharts%E6%8A%A5%E9%94%99-pyecharts-has-no-attribute-Bar-%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[pyecharts报错’pyecharts’ has no attribute ‘Bar’的解决办法1、出错原因因为用下面语句安装pyecharts时，默认会安装最新版本的pyecharts，python解释器版本更新的速度慢很多，现在的python解释器默认的是与0.1.9.4版本的pyecharts配合，你安装最新的，python解释器不能识别，所以会报错。 1pip install pyecharts 2、解决方法1234# 1.先安装wheelpip install wheel# 2.再安装pyecharts0.1.9.4版本pip install pyecharts==0.1.9.4 3、验证123456from pyecharts import Barbar1 = Bar("我的第一个图表", "副标题")bar1.add("服装", ['衬衣', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'], [5, 20, 36, 10, 75, 90])bar1.show_config()bar1.render() 运行上面的代码会生成如下的render.html文件： 在浏览器打开：]]></content>
+    <content type="text"><![CDATA[1、出错原因因为用下面语句安装pyecharts时，默认会安装最新版本的pyecharts，python解释器版本更新的速度慢很多，现在的python解释器默认的是与0.1.9.4版本的pyecharts配合，你安装最新的，python解释器不能识别，所以会报错。 1pip install pyecharts 2、解决方法1234# 1.先安装wheelpip install wheel# 2.再安装pyecharts0.1.9.4版本pip install pyecharts==0.1.9.4 3、验证123456from pyecharts import Barbar1 = Bar("我的第一个图表", "副标题")bar1.add("服装", ['衬衣', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'], [5, 20, 36, 10, 75, 90])bar1.show_config()bar1.render() 运行上面的代码会生成如下的render.html文件： 在浏览器打开：]]></content>
       <categories>
         <category>Python</category>
       </categories>
