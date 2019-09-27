@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[修改mysql时区的三种方法]]></title>
+    <url>%2F2019%2F09%2F27%2F%E4%BF%AE%E6%94%B9mysql%E6%97%B6%E5%8C%BA%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[方法一：通过mysql命令行模式下动态修改1.1 查看mysql当前时间，当前时区1234567891011121314&gt; select curtime(); #或select now()也可以+-----------+| curtime() |+-----------+| 15:18:10 |+-----------+&gt; show variables like "%time_zone%";+------------------+--------+| Variable_name | Value |+------------------+--------+| system_time_zone | CST || time_zone | SYSTEM |+------------------+--------+2 rows in set (0.00 sec) time_zone说明mysql使用system的时区，system_time_zone说明system使用CST时区 1.2 修改时区123&gt; set global time_zone = &apos;+8:00&apos;; ##修改mysql全局时区为北京时间，即我们所在的东8区&gt; set time_zone = &apos;+8:00&apos;; ##修改当前会话时区&gt; flush privileges; #立即生效 方法二：通过修改my.cnf配置文件来修改时区123# vim /etc/my.cnf ##在[mysqld]区域中加上default-time_zone = &apos;+8:00&apos;# /etc/init.d/mysqld restart ##重启mysql使新时区生效 方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区这里，以php为例，在mysql_connect()下使用: 1mysql_query(&quot;SET time_zone = &apos;+8:00&apos;&quot;) 这样可以在保证你不重启的情况下改变时区。但是mysql的某些系统函数还是不能用如：now()。这句，还是不能理解。]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[解决zabbix设置为中文后图形中中文乱码的问题]]></title>
     <url>%2F2019%2F09%2F27%2F%E8%A7%A3%E5%86%B3zabbix%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%AD%E6%96%87%E5%90%8E%E5%9B%BE%E5%BD%A2%E4%B8%AD%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[1、下载汉化的字体zabbix3.4中，存放字体的目录在/usr/share/zabbix/fonts/ 1wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf 2、修改配置文件修改/usr/share/zabbix/include/defines.inc.php文件： 1vim /usr/share/zabbix/include/defines.inc.php 3、重启zabbix-server1systemctl restart zabbix-server.service]]></content>

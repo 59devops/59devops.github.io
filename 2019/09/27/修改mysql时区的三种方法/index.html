@@ -56,23 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="1、下载汉化的字体zabbix3.4中，存放字体的目录在/usr/share/zabbix/fonts/ 1wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf">
-<meta name="keywords" content="zabbix">
+  <meta name="description" content="方法一：通过mysql命令行模式下动态修改1.1 查看mysql当前时间，当前时区1234567891011121314&amp;gt; select curtime();  #或select now()也可以+-----------+| curtime() |+-----------+| 15:18:10 |+-----------+&amp;gt; show variables like &quot;%time_zon">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决zabbix设置为中文后图形中中文乱码的问题">
-<meta property="og:url" content="http://yoursite.com/2019/09/27/解决zabbix设置为中文后图形中中文乱码的问题/index.html">
+<meta property="og:title" content="修改mysql时区的三种方法">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/修改mysql时区的三种方法/index.html">
 <meta property="og:site_name" content="59Devops">
-<meta property="og:description" content="1、下载汉化的字体zabbix3.4中，存放字体的目录在/usr/share/zabbix/fonts/ 1wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf">
+<meta property="og:description" content="方法一：通过mysql命令行模式下动态修改1.1 查看mysql当前时间，当前时区1234567891011121314&amp;gt; select curtime();  #或select now()也可以+-----------+| curtime() |+-----------+| 15:18:10 |+-----------+&amp;gt; show variables like &quot;%time_zon">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://static.staryjie.com/static/images/20180620140701.png">
-<meta property="og:image" content="http://static.staryjie.com/static/images/20180620140744.png">
-<meta property="og:image" content="http://static.staryjie.com/static/images/20180620140937.png">
-<meta property="og:updated_time" content="2019-09-27T06:13:35.480Z">
+<meta property="og:updated_time" content="2019-09-27T06:16:55.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决zabbix设置为中文后图形中中文乱码的问题">
-<meta name="twitter:description" content="1、下载汉化的字体zabbix3.4中，存放字体的目录在/usr/share/zabbix/fonts/ 1wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf">
-<meta name="twitter:image" content="http://static.staryjie.com/static/images/20180620140701.png">
-  <link rel="canonical" href="http://yoursite.com/2019/09/27/解决zabbix设置为中文后图形中中文乱码的问题/">
+<meta name="twitter:title" content="修改mysql时区的三种方法">
+<meta name="twitter:description" content="方法一：通过mysql命令行模式下动态修改1.1 查看mysql当前时间，当前时区1234567891011121314&amp;gt; select curtime();  #或select now()也可以+-----------+| curtime() |+-----------+| 15:18:10 |+-----------+&amp;gt; show variables like &quot;%time_zon">
+  <link rel="canonical" href="http://yoursite.com/2019/09/27/修改mysql时区的三种方法/">
 
 
 <script id="page-configurations">
@@ -86,7 +82,7 @@
   };
 </script>
 
-  <title>解决zabbix设置为中文后图形中中文乱码的问题 | 59Devops</title>
+  <title>修改mysql时区的三种方法 | 59Devops</title>
   
 
 
@@ -254,7 +250,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/解决zabbix设置为中文后图形中中文乱码的问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/修改mysql时区的三种方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="StaryJie">
@@ -266,7 +262,7 @@
       <meta itemprop="name" content="59Devops">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">解决zabbix设置为中文后图形中中文乱码的问题
+        <h1 class="post-title" itemprop="name headline">修改mysql时区的三种方法
 
           
         </h1>
@@ -282,7 +278,7 @@
                 
               
 
-              <time title="创建时间：2019-09-27 14:08:10 / 修改时间：14:13:35" itemprop="dateCreated datePublished" datetime="2019-09-27T14:08:10+08:00">2019-09-27</time>
+              <time title="创建时间：2019-09-27 14:15:30 / 修改时间：14:16:55" itemprop="dateCreated datePublished" datetime="2019-09-27T14:15:30+08:00">2019-09-27</time>
             </span>
           
             
@@ -295,7 +291,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/zabbix/" itemprop="url" rel="index"><span itemprop="name">zabbix</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MySQL/" itemprop="url" rel="index"><span itemprop="name">MySQL</span></a></span>
 
                 
                 
@@ -314,15 +310,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="1、下载汉化的字体"><a href="#1、下载汉化的字体" class="headerlink" title="1、下载汉化的字体"></a>1、下载汉化的字体</h3><p>zabbix3.4中，存放字体的目录在<code>/usr/share/zabbix/fonts/</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /usr/share/zabbix/fonts/msyh.ttf https://raw.githubusercontent.com/chenqing/ng-mini/master/font/msyh.ttf</span><br></pre></td></tr></table></figure>
+        <h3 id="方法一：通过mysql命令行模式下动态修改"><a href="#方法一：通过mysql命令行模式下动态修改" class="headerlink" title="方法一：通过mysql命令行模式下动态修改"></a>方法一：通过mysql命令行模式下动态修改</h3><h4 id="1-1-查看mysql当前时间，当前时区"><a href="#1-1-查看mysql当前时间，当前时区" class="headerlink" title="1.1 查看mysql当前时间，当前时区"></a>1.1 查看mysql当前时间，当前时区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> select curtime();  #或select now()也可以</span><br><span class="line">+-----------+</span><br><span class="line">| curtime() |</span><br><span class="line">+-----------+</span><br><span class="line">| 15:18:10 |</span><br><span class="line">+-----------+</span><br><span class="line"><span class="meta">&gt;</span> show variables like "%time_zone%";</span><br><span class="line">+------------------+--------+</span><br><span class="line">| Variable_name  | Value |</span><br><span class="line">+------------------+--------+</span><br><span class="line">| system_time_zone | CST  |</span><br><span class="line">| time_zone    | SYSTEM |</span><br><span class="line">+------------------+--------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>time_zone说明mysql使用system的时区，system_time_zone说明system使用CST时区</p>
+</blockquote>
 <a id="more"></a>
-<h3 id="2、修改配置文件"><a href="#2、修改配置文件" class="headerlink" title="2、修改配置文件"></a>2、修改配置文件</h3><p>修改<code>/usr/share/zabbix/include/defines.inc.php</code>文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/share/zabbix/include/defines.inc.php</span><br></pre></td></tr></table></figure>
-<p><img src="http://static.staryjie.com/static/images/20180620140701.png" alt></p>
-<p><img src="http://static.staryjie.com/static/images/20180620140744.png" alt></p>
-<h3 id="3、重启zabbix-server"><a href="#3、重启zabbix-server" class="headerlink" title="3、重启zabbix-server"></a>3、重启zabbix-server</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart zabbix-server.service</span><br></pre></td></tr></table></figure>
-<p><img src="http://static.staryjie.com/static/images/20180620140937.png" alt></p>
+<h4 id="1-2-修改时区"><a href="#1-2-修改时区" class="headerlink" title="1.2 修改时区"></a>1.2 修改时区</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; set global time_zone = &apos;+8:00&apos;; ##修改mysql全局时区为北京时间，即我们所在的东8区</span><br><span class="line">&gt; set time_zone = &apos;+8:00&apos;; ##修改当前会话时区</span><br><span class="line">&gt; flush privileges; #立即生效</span><br></pre></td></tr></table></figure>
+<h3 id="方法二：通过修改my-cnf配置文件来修改时区"><a href="#方法二：通过修改my-cnf配置文件来修改时区" class="headerlink" title="方法二：通过修改my.cnf配置文件来修改时区"></a>方法二：通过修改my.cnf配置文件来修改时区</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/my.cnf ##在[mysqld]区域中加上</span><br><span class="line">default-time_zone = &apos;+8:00&apos;</span><br><span class="line"># /etc/init.d/mysqld restart ##重启mysql使新时区生效</span><br></pre></td></tr></table></figure>
+<h3 id="方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区"><a href="#方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区" class="headerlink" title="方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区"></a>方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区</h3><p>这里，以php为例，在mysql_connect()下使用:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(&quot;SET time_zone = &apos;+8:00&apos;&quot;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这样可以在保证你不重启的情况下改变时区。但是mysql的某些系统函数还是不能用如：now()。这句，还是不能理解。</p>
+</blockquote>
 
     </div>
 
@@ -338,7 +337,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/zabbix/" rel="tag"># zabbix</a>
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
             
           </div>
         
@@ -348,8 +347,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/27/Mac-OS将U盘格式化为ext2-3-4格式/" rel="next" title="Mac OS将U盘格式化为ext2/3/4格式">
-                  <i class="fa fa-chevron-left"></i> Mac OS将U盘格式化为ext2/3/4格式
+                <a href="/2019/09/27/解决zabbix设置为中文后图形中中文乱码的问题/" rel="next" title="解决zabbix设置为中文后图形中中文乱码的问题">
+                  <i class="fa fa-chevron-left"></i> 解决zabbix设置为中文后图形中中文乱码的问题
                 </a>
               
             </div>
@@ -357,10 +356,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/27/修改mysql时区的三种方法/" rel="prev" title="修改mysql时区的三种方法">
-                  修改mysql时区的三种方法 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -412,7 +407,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、下载汉化的字体"><span class="nav-number">1.</span> <span class="nav-text">1、下载汉化的字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、修改配置文件"><span class="nav-number">2.</span> <span class="nav-text">2、修改配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、重启zabbix-server"><span class="nav-number">3.</span> <span class="nav-text">3、重启zabbix-server</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：通过mysql命令行模式下动态修改"><span class="nav-number">1.</span> <span class="nav-text">方法一：通过mysql命令行模式下动态修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-查看mysql当前时间，当前时区"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 查看mysql当前时间，当前时区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-修改时区"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 修改时区</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：通过修改my-cnf配置文件来修改时区"><span class="nav-number">2.</span> <span class="nav-text">方法二：通过修改my.cnf配置文件来修改时区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区"><span class="nav-number">3.</span> <span class="nav-text">方法三：如果不方便重启mysql，又想临时解决时区问题，可以通过php或其他语言在初始化mysql时初始化mysql时区</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -616,7 +611,7 @@ window.addEventListener('pjax:success', () => {
       repo: '59devops.github.io',
       owner: '59devops',
       admin: ['59devops'],
-      id: '5e733d062d190190b695f954306a5cce',
+      id: '23b3e5dad64db3e1cc73c98972072c6d',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'
