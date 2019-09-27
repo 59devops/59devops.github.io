@@ -317,12 +317,12 @@
 </blockquote>
 <h3 id="1-1-pip安装"><a href="#1-1-pip安装" class="headerlink" title="1.1 pip安装"></a>1.1 pip安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pipenv</span><br></pre></td></tr></table></figure>
 <h3 id="1-2-Mac通过brew安装"><a href="#1-2-Mac通过brew安装" class="headerlink" title="1.2 Mac通过brew安装"></a>1.2 Mac通过brew安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install pipenv</span><br></pre></td></tr></table></figure>
-<h2 id="2、pipenv简单使用"><a href="#2、pipenv简单使用" class="headerlink" title="2、pipenv简单使用"></a>2、pipenv简单使用</h2><h3 id="2-1-创建虚拟环境"><a href="#2-1-创建虚拟环境" class="headerlink" title="2.1 创建虚拟环境"></a>2.1 创建虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入项目目录</span></span><br><span class="line">cd projectdir</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建虚拟环境</span></span><br><span class="line">pipenv install</span><br></pre></td></tr></table></figure>
+<h2 id="2、pipenv简单使用"><a href="#2、pipenv简单使用" class="headerlink" title="2、pipenv简单使用"></a>2、pipenv简单使用</h2><h3 id="2-1-创建虚拟环境"><a href="#2-1-创建虚拟环境" class="headerlink" title="2.1 创建虚拟环境"></a>2.1 创建虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 进入项目目录</span><br><span class="line">cd projectdir</span><br><span class="line"><span class="meta">#</span> 创建虚拟环境</span><br><span class="line">pipenv install</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>上面的命令会自动在~/.local/share/virtualenvs/目录下创建一个projectdir加一串随机字符串的虚拟环境目录。</p>
 </blockquote>
-<h3 id="2-2-创建指定python版本的虚拟环境"><a href="#2-2-创建指定python版本的虚拟环境" class="headerlink" title="2.2 创建指定python版本的虚拟环境"></a>2.2 创建指定python版本的虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 指定python版本为3.6.5</span></span><br><span class="line">pipenv install --python 3.6.5</span><br><span class="line"><span class="meta">#</span><span class="bash"> 或者</span></span><br><span class="line">pipenv --python 3.6.5</span><br></pre></td></tr></table></figure>
-<h3 id="2-3-修改pipenv默认虚拟环境位置为当前目录下"><a href="#2-3-修改pipenv默认虚拟环境位置为当前目录下" class="headerlink" title="2.3 修改pipenv默认虚拟环境位置为当前目录下"></a>2.3 修改pipenv默认虚拟环境位置为当前目录下</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 设置环境变量PIPENV_VENV_IN_PROJECT=1</span></span><br><span class="line">export export PIPENV_VENV_IN_PROJECT=1</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-创建指定python版本的虚拟环境"><a href="#2-2-创建指定python版本的虚拟环境" class="headerlink" title="2.2 创建指定python版本的虚拟环境"></a>2.2 创建指定python版本的虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 指定python版本为3.6.5</span><br><span class="line">pipenv install --python 3.6.5</span><br><span class="line"><span class="meta">#</span> 或者</span><br><span class="line">pipenv --python 3.6.5</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-修改pipenv默认虚拟环境位置为当前目录下"><a href="#2-3-修改pipenv默认虚拟环境位置为当前目录下" class="headerlink" title="2.3 修改pipenv默认虚拟环境位置为当前目录下"></a>2.3 修改pipenv默认虚拟环境位置为当前目录下</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 设置环境变量PIPENV_VENV_IN_PROJECT=1</span><br><span class="line">export export PIPENV_VENV_IN_PROJECT=1</span><br></pre></td></tr></table></figure>
 <blockquote>
 <h6 id="在初始化虚拟环境的时候，pipenv默认会把虚拟环境的python目录以-及后来安装的各种模块放到-home-username-local-share-virtualenvs里，一般-和home是在一个分区的-之前就遇到过-所在的分区写满了，整个服务器都挂掉了-，如果想放到其他地方可以有以下几种方法："><a href="#在初始化虚拟环境的时候，pipenv默认会把虚拟环境的python目录以-及后来安装的各种模块放到-home-username-local-share-virtualenvs里，一般-和home是在一个分区的-之前就遇到过-所在的分区写满了，整个服务器都挂掉了-，如果想放到其他地方可以有以下几种方法：" class="headerlink" title="在初始化虚拟环境的时候，pipenv默认会把虚拟环境的python目录以 及后来安装的各种模块放到/home/$username/.local/share/virtualenvs里，一般/和home是在一个分区的(之前就遇到过/所在的分区写满了，整个服务器都挂掉了)，如果想放到其他地方可以有以下几种方法："></a>在初始化虚拟环境的时候，pipenv默认会把虚拟环境的python目录以 及后来安装的各种模块放到/home/$username/.local/share/virtualenvs里，一般/和home是在一个分区的(之前就遇到过/所在的分区写满了，整个服务器都挂掉了)，如果想放到其他地方可以有以下几种方法：</h6><ol>
 <li>export PIPENV_VENV_IN_PROJECT=1 设置这个环境变量，pipenv会在当前目录下创建.venv的目录，以后都会把模块装到这个.venv下。</li>
@@ -331,7 +331,7 @@
 </ol>
 </blockquote>
 <h3 id="2-4-激活虚拟环境"><a href="#2-4-激活虚拟环境" class="headerlink" title="2.4 激活虚拟环境"></a>2.4 激活虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv shell</span><br></pre></td></tr></table></figure>
-<h3 id="2-5-安装相关模块并加入到Pipfile"><a href="#2-5-安装相关模块并加入到Pipfile" class="headerlink" title="2.5 安装相关模块并加入到Pipfile"></a>2.5 安装相关模块并加入到Pipfile</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pipenv install packagename</span><br><span class="line"><span class="meta">#</span><span class="bash"> 比如</span></span><br><span class="line">pipenv install flask</span><br></pre></td></tr></table></figure>
+<h3 id="2-5-安装相关模块并加入到Pipfile"><a href="#2-5-安装相关模块并加入到Pipfile" class="headerlink" title="2.5 安装相关模块并加入到Pipfile"></a>2.5 安装相关模块并加入到Pipfile</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pipenv install packagename</span><br><span class="line"><span class="meta">#</span> 比如</span><br><span class="line">pipenv install flask</span><br></pre></td></tr></table></figure>
 <h3 id="2-6-安装固定版本模块并加入到Pipfile"><a href="#2-6-安装固定版本模块并加入到Pipfile" class="headerlink" title="2.6 安装固定版本模块并加入到Pipfile"></a>2.6 安装固定版本模块并加入到Pipfile</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv install django==1.11</span><br></pre></td></tr></table></figure>
 <h3 id="2-7-显示虚拟环境信息"><a href="#2-7-显示虚拟环境信息" class="headerlink" title="2.7 显示虚拟环境信息"></a>2.7 显示虚拟环境信息</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv --venv</span><br></pre></td></tr></table></figure>
 <h3 id="2-8-显示目录信息"><a href="#2-8-显示目录信息" class="headerlink" title="2.8 显示目录信息"></a>2.8 显示目录信息</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipenv --where</span><br></pre></td></tr></table></figure>
@@ -366,8 +366,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/27/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/2019/09/27/利用GitHub从零开始搭建一个博客/" rel="next" title="利用GitHub从零开始搭建一个博客">
+                  <i class="fa fa-chevron-left"></i> 利用GitHub从零开始搭建一个博客
                 </a>
               
             </div>
@@ -444,7 +444,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
