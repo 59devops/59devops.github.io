@@ -310,7 +310,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="方法一：通过mysql命令行模式下动态修改"><a href="#方法一：通过mysql命令行模式下动态修改" class="headerlink" title="方法一：通过mysql命令行模式下动态修改"></a>方法一：通过mysql命令行模式下动态修改</h3><h4 id="1-1-查看mysql当前时间，当前时区"><a href="#1-1-查看mysql当前时间，当前时区" class="headerlink" title="1.1 查看mysql当前时间，当前时区"></a>1.1 查看mysql当前时间，当前时区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> select curtime();  #或select now()也可以</span><br><span class="line">+-----------+</span><br><span class="line">| curtime() |</span><br><span class="line">+-----------+</span><br><span class="line">| 15:18:10 |</span><br><span class="line">+-----------+</span><br><span class="line"><span class="meta">&gt;</span> show variables like "%time_zone%";</span><br><span class="line">+------------------+--------+</span><br><span class="line">| Variable_name  | Value |</span><br><span class="line">+------------------+--------+</span><br><span class="line">| system_time_zone | CST  |</span><br><span class="line">| time_zone    | SYSTEM |</span><br><span class="line">+------------------+--------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+        <h3 id="方法一：通过mysql命令行模式下动态修改"><a href="#方法一：通过mysql命令行模式下动态修改" class="headerlink" title="方法一：通过mysql命令行模式下动态修改"></a>方法一：通过mysql命令行模式下动态修改</h3><h4 id="1-1-查看mysql当前时间，当前时区"><a href="#1-1-查看mysql当前时间，当前时区" class="headerlink" title="1.1 查看mysql当前时间，当前时区"></a>1.1 查看mysql当前时间，当前时区</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> select curtime();  <span class="comment">#或select now()也可以</span></span></span><br><span class="line">+-----------+</span><br><span class="line">| curtime() |</span><br><span class="line">+-----------+</span><br><span class="line">| 15:18:10 |</span><br><span class="line">+-----------+</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> show variables like <span class="string">"%time_zone%"</span>;</span></span><br><span class="line">+------------------+--------+</span><br><span class="line">| Variable_name  | Value |</span><br><span class="line">+------------------+--------+</span><br><span class="line">| system_time_zone | CST  |</span><br><span class="line">| time_zone    | SYSTEM |</span><br><span class="line">+------------------+--------+</span><br><span class="line">2 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>time_zone说明mysql使用system的时区，system_time_zone说明system使用CST时区</p>
 </blockquote>
@@ -429,7 +429,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -442,7 +442,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -455,7 +455,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

@@ -56,18 +56,21 @@
   };
 </script>
 
-  <meta name="description" content="记录学习、工作和生活中遇到的各种问题。">
-<meta name="keywords" content="运维, Python, Shell, ...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="59Devops">
-<meta property="og:url" content="http://yoursite.com/tags/Linux/index.html">
+  <meta name="description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。 1.通过命令行确定php.ini文件的位置1php -r &quot;phpinfo();&quot; | grep &apos;php.ini&apos; 上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。 1/usr/local/php/bin/php -r &apos;phpinfo();&apos; | grep">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP编译安装完成之后没有&#39;php.ini&#39;文件的处理方法">
+<meta property="og:url" content="http://yoursite.com/2019/09/30/PHP编译安装完成之后没有-php-ini-文件的处理方法/index.html">
 <meta property="og:site_name" content="59Devops">
-<meta property="og:description" content="记录学习、工作和生活中遇到的各种问题。">
+<meta property="og:description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。 1.通过命令行确定php.ini文件的位置1php -r &quot;phpinfo();&quot; | grep &apos;php.ini&apos; 上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。 1/usr/local/php/bin/php -r &apos;phpinfo();&apos; | grep">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://static.staryjie.com/static/images/20190409155837.png">
+<meta property="og:updated_time" content="2019-09-30T05:49:44.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="59Devops">
-<meta name="twitter:description" content="记录学习、工作和生活中遇到的各种问题。">
-  <link rel="canonical" href="http://yoursite.com/tags/Linux/">
+<meta name="twitter:title" content="PHP编译安装完成之后没有&#39;php.ini&#39;文件的处理方法">
+<meta name="twitter:description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。 1.通过命令行确定php.ini文件的位置1php -r &quot;phpinfo();&quot; | grep &apos;php.ini&apos; 上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。 1/usr/local/php/bin/php -r &apos;phpinfo();&apos; | grep">
+<meta name="twitter:image" content="http://static.staryjie.com/static/images/20190409155837.png">
+  <link rel="canonical" href="http://yoursite.com/2019/09/30/PHP编译安装完成之后没有-php-ini-文件的处理方法/">
 
 
 <script id="page-configurations">
@@ -75,13 +78,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>标签: Linux | 59Devops</title>
+  <title>PHP编译安装完成之后没有'php.ini'文件的处理方法 | 59Devops</title>
   
 
 
@@ -240,82 +243,140 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block tag">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Linux<small>标签</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/30/PHP编译安装完成之后没有-php-ini-文件的处理方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="StaryJie">
+      <meta itemprop="description" content="记录学习、工作和生活中遇到的各种问题。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="59Devops">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">PHP编译安装完成之后没有'php.ini'文件的处理方法
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-30 13:49:08 / 修改时间：13:49:44" itemprop="dateCreated datePublished" datetime="2019-09-30T13:49:08+08:00">2019-09-30</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p>在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。</p>
+<h3 id="1-通过命令行确定php-ini文件的位置"><a href="#1-通过命令行确定php-ini文件的位置" class="headerlink" title="1.通过命令行确定php.ini文件的位置"></a>1.通过命令行确定<code>php.ini</code>文件的位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -r <span class="string">"phpinfo();"</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure>
+<p>上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/php/bin/php -r <span class="string">'phpinfo();'</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure>
+<p><code>/usr/local/php/bin/php</code>就是PHP编译安装后所在的路径。</p>
+<p><img src="http://static.staryjie.com/static/images/20190409155837.png" alt></p>
+<p>如图所示，<code>php.ini</code>文件应该放在<code>/usr/local/php/lib/</code>目录下面。</p>
+<h3 id="2-生成php-ini文件"><a href="#2-生成php-ini文件" class="headerlink" title="2.生成php.ini文件"></a>2.生成<code>php.ini</code>文件</h3><p>一般在PHP源码包中都会有现成的默认配置文件存在，只需要根据需要将他们做一定的修改即可使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@ggy-php ~]<span class="comment"># find /tools/php-7.1.9/ -name "php.ini*"</span></span><br><span class="line">/tools/php-7.1.9/php.ini-production</span><br><span class="line">/tools/php-7.1.9/php.ini-development</span><br><span class="line">[root@ggy-php ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p>通过find命令可以找到两个配置文件，一个是开发环境使用的，一个是生产环境使用的。根据自己的需要，修改配置文件并复制到<code>/usr/local/php/lib/</code>目录下，重启PHP即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp /tools/php-7.1.9/php.ini-production /usr/local/php/lib/php.ini</span><br><span class="line">killall php-fpm</span><br><span class="line">/usr/local/php/sbin/php-fpm &amp;</span><br></pre></td></tr></table></figure>
 
-  
-  
+    </div>
 
-  
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    
+    
         
-          <a class="post-title-link" href="/2019/09/27/FTP服务搭建配置/" itemprop="url">
-            <span itemprop="name">FTP服务搭建配置</span>
-          </a>
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/PHP/" rel="tag"># PHP</a>
+            
+          </div>
         
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-27T14:45:08+08:00"
-              content="2019-09-27">
-          09-27
-        </time>
-      </div>
+        
 
-    </header>
-  </article>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/27/FTP服务搭建配置/" rel="next" title="FTP服务搭建配置">
+                  <i class="fa fa-chevron-left"></i> FTP服务搭建配置
+                </a>
+              
+            </div>
 
+            <span class="post-nav-divider"></span>
 
-
-    </div>
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
         </div>
           
@@ -330,6 +391,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -342,6 +408,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-通过命令行确定php-ini文件的位置"><span class="nav-number">1.</span> <span class="nav-text">1.通过命令行确定php.ini文件的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-生成php-ini文件"><span class="nav-number">2.</span> <span class="nav-text">2.生成php.ini文件</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -534,6 +602,24 @@ window.addEventListener('pjax:success', () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'cb34a61011c438548cec',
+      clientSecret: '3d9c756a081ce2b91a6a286eb1a0a02a71ced6ca',
+      repo: '59devops.github.io',
+      owner: '59devops',
+      admin: ['59devops'],
+      id: 'fbc3b6680fea44358abcf45f68cdedd5',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
     </div>
 </body>
