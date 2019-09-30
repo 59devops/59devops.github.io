@@ -56,18 +56,18 @@
   };
 </script>
 
-  <meta name="description" content="1、出现错误的场合： 运行/usr/local/php/bin/phpize时出现：Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf inst">
+  <meta name="description" content="1、出现错误的场合： 运行/usr/local/php/bin/phpize时出现：1Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf ins">
 <meta name="keywords" content="PHP,AMQP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="phpize命令在安装AMQP插件是报错phpize：Cannot find autoconf. Please check your autoconf installation and the  envir的解决方法">
 <meta property="og:url" content="http://yoursite.com/2019/09/30/phpize命令在安装AMQP插件是报错phpize：Cannot-find-autoconf-Please-check-your-autoconf-installation-and-the-envir的解决方法/index.html">
 <meta property="og:site_name" content="59Devops">
-<meta property="og:description" content="1、出现错误的场合： 运行/usr/local/php/bin/phpize时出现：Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf inst">
+<meta property="og:description" content="1、出现错误的场合： 运行/usr/local/php/bin/phpize时出现：1Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf ins">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T06:06:29.288Z">
+<meta property="og:updated_time" content="2019-09-30T06:12:01.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="phpize命令在安装AMQP插件是报错phpize：Cannot find autoconf. Please check your autoconf installation and the  envir的解决方法">
-<meta name="twitter:description" content="1、出现错误的场合： 运行/usr/local/php/bin/phpize时出现：Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf inst">
+<meta name="twitter:description" content="1、出现错误的场合： 运行/usr/local/php/bin/phpize时出现：1Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf ins">
   <link rel="canonical" href="http://yoursite.com/2019/09/30/phpize命令在安装AMQP插件是报错phpize：Cannot-find-autoconf-Please-check-your-autoconf-installation-and-the-envir的解决方法/">
 
 
@@ -278,7 +278,7 @@
                 
               
 
-              <time title="创建时间：2019-09-30 14:05:08 / 修改时间：14:06:29" itemprop="dateCreated datePublished" datetime="2019-09-30T14:05:08+08:00">2019-09-30</time>
+              <time title="创建时间：2019-09-30 14:05:08 / 修改时间：14:12:01" itemprop="dateCreated datePublished" datetime="2019-09-30T14:05:08+08:00">2019-09-30</time>
             </span>
           
             
@@ -311,7 +311,7 @@
 
       
         <p>1、出现错误的场合：</p>
-<p>运行/usr/local/php/bin/phpize时出现：<br>Configuring for: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf installation and the $PHP_AUTOCONF environment variable. Then, rerun this script. </p>
+<p>运行/usr/local/php/bin/phpize时出现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Configuring <span class="keyword">for</span>: PHP Api Version: 20041225 Zend Module Api No: 20060613 Zend Extension Api No: 220060519 Cannot find autoconf. Please check your autoconf installation and the <span class="variable">$PHP_AUTOCONF</span> environment variable. Then, rerun this script.</span><br></pre></td></tr></table></figure></p>
 <p>解决办法是：</p>
 <a id="more"></a>
 <p>cd /usr/src &amp;&amp; wget <a href="http://ftp.gnu.org/gnu/m4/m4-1.4.9.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/m4/m4-1.4.9.tar.gz</a><br>tar -zvxf m4-1.4.9.tar.gz # cd m4-1.4.9/<br>./configure &amp;&amp; make &amp;&amp; make install # cd ../<br>wget <a href="http://ftp.gnu.org/gnu/autoconf/autoconf-2.62.tar.gz" target="_blank" rel="noopener">http://ftp.gnu.org/gnu/autoconf/autoconf-2.62.tar.gz</a><br>tar -zvxf autoconf-2.62.tar.gz<br>cd autoconf-2.62/<br>./configure &amp;&amp; make &amp;&amp; make install<br>当然，也可以直接yum安装就可以了：</p>
