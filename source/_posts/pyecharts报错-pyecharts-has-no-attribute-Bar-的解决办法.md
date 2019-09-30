@@ -8,8 +8,6 @@ categories:
 - Python
 ---
 
-## pyecharts报错'pyecharts' has no attribute 'Bar'的解决办法
-
 ### 1、出错原因
 
 因为用下面语句安装`pyecharts`时，默认会安装最新版本的`pyecharts`，python解释器版本更新的速度慢很多，现在的python解释器默认的是与0.1.9.4版本的`pyecharts`配合，你安装最新的，python解释器不能识别，所以会报错。

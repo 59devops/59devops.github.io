@@ -3,10 +3,8 @@ title: 利用GitHub从零开始搭建一个博客
 date: 2019-09-27 12:47:40
 tags:
 - Hexo
-- Blog
 categories:
 - Hexo
-- Blog
 ---
 
 一般我们要搭建一个个人的博客站点需要买服务器、域名，装各种运行环境等等，非常的费钱费力。
