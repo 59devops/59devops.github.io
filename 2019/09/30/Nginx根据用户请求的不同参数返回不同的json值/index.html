@@ -64,7 +64,7 @@
 <meta property="og:site_name" content="59Devops">
 <meta property="og:description" content="用户请求url:http://localhost:8000/getconfig?v=1.03.01,根据参数v=1.03.01或者其他的值返回不同的json值。如果用户请求不带该参数，则返回默认的json值。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T06:03:29.333Z">
+<meta property="og:updated_time" content="2019-09-30T06:09:32.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx根据用户请求的不同参数返回不同的json值">
 <meta name="twitter:description" content="用户请求url:http://localhost:8000/getconfig?v=1.03.01,根据参数v=1.03.01或者其他的值返回不同的json值。如果用户请求不带该参数，则返回默认的json值。">
@@ -278,7 +278,7 @@
                 
               
 
-              <time title="创建时间：2019-09-30 14:02:40 / 修改时间：14:03:29" itemprop="dateCreated datePublished" datetime="2019-09-30T14:02:40+08:00">2019-09-30</time>
+              <time title="创建时间：2019-09-30 14:02:40 / 修改时间：14:09:32" itemprop="dateCreated datePublished" datetime="2019-09-30T14:02:40+08:00">2019-09-30</time>
             </span>
           
             
@@ -312,39 +312,14 @@
       
         <p>　　用户请求url:<a href="http://localhost:8000/getconfig?v=1.03.01,根据参数v=1.03.01或者其他的值返回不同的json值。如果用户请求不带该参数，则返回默认的json值。" target="_blank" rel="noopener">http://localhost:8000/getconfig?v=1.03.01,根据参数v=1.03.01或者其他的值返回不同的json值。如果用户请求不带该参数，则返回默认的json值。</a></p>
 <a id="more"></a>
-<p>　　下面是nginx.conf的配置：</p>
-<p>server {<br>        listen       8000;<br>        server_name  localhost;</p>
-<pre><code>    #charset koi8-r;
-    #access_log  logs/host.access.log  main;
-
-    location ~ ^/getconfig {
-        default_type application/json;
-        if ( $query_string ~* ^(.*)v=1.03.01$ ){
-        return 200 &#39;{&quot;status&quot;: &quot;0&quot;,&quot;message&quot;: &quot;OK&quot;,&quot;body&quot;: {&quot;api&quot;:&quot;http://116.62.113.124:8080/basestock000/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8090/&quot;,&quot;phone&quot;:&quot;4000670019&quot;,&quot;cr&quot;:&quot;Copyright xxxxx&quot;}}&#39;;
-        }
-        return 200 &#39;{&quot;status&quot;: &quot;0&quot;,&quot;message&quot;: &quot;OK&quot;,&quot;body&quot;: {&quot;api&quot;:&quot;http://116.62.113.124:8080/basestock000/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8090/&quot;,&quot;phone&quot;:&quot;4000670019&quot;,&quot;cr&quot;:&quot;Copyright xxxxx&quot;}}&#39;;
-    }
-</code></pre><p>}<br>　　用户请求<a href="http://localhost:8000/getconfig时，应该返回" target="_blank" rel="noopener">http://localhost:8000/getconfig时，应该返回</a></p>
+<p>　　下面是nginx.conf的配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       8000;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">        <span class="comment">#charset koi8-r;</span></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        location ~ ^/getconfig &#123;</span><br><span class="line">			default_type application/json;</span><br><span class="line">			<span class="keyword">if</span> ( <span class="variable">$query_string</span> ~* ^(.*)v=1.03.01$ )&#123;</span><br><span class="line">			<span class="built_in">return</span> 200 <span class="string">'&#123;"status": "0","message": "OK","body": &#123;"api":"http://116.62.113.124:8080/basestock000/","h5":"http://118.31.69.127:8090/","phone":"4000670019","cr":"Copyright xxxxx"&#125;&#125;'</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">return</span> 200 <span class="string">'&#123;"status": "0","message": "OK","body": &#123;"api":"http://116.62.113.124:8080/basestock000/","h5":"http://118.31.69.127:8090/","phone":"4000670019","cr":"Copyright xxxxx"&#125;&#125;'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　用户请求<a href="http://localhost:8000/getconfig时，应该返回" target="_blank" rel="noopener">http://localhost:8000/getconfig时，应该返回</a></p>
 <p>return 200 ‘{“status”: “0”,”message”: “OK”,”body”: {“api”:”<a href="http://116.62.113.124:8080/basestock000/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8090/&quot;,&quot;phone&quot;:&quot;4000670019&quot;,&quot;cr&quot;:&quot;Copyright" target="_blank" rel="noopener">http://116.62.113.124:8080/basestock000/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8090/&quot;,&quot;phone&quot;:&quot;4000670019&quot;,&quot;cr&quot;:&quot;Copyright</a> xxxxx”}}’;<br>　　浏览器模拟请求：<a href="http://localhost:8000/getconfig" target="_blank" rel="noopener">http://localhost:8000/getconfig</a></p>
 <p>　　</p>
 <p>　　浏览器请求：<a href="http://localhost:8000/getconfig?v=1.03.01时：" target="_blank" rel="noopener">http://localhost:8000/getconfig?v=1.03.01时：</a></p>
 <p>　</p>
-<p>　　可以满足需求，当有多个参数值的时候，本人没有想出来别的更好的办法，本来以为可以使用if else或者if else if的，结果我在测试的时候配置检查都不通过，没办法就采用了下面的办法：</p>
-<p>server {<br>        listen       8000;<br>        server_name  localhost;</p>
-<pre><code>    #charset koi8-r;
-    #access_log  logs/host.access.log  main;
-
-    location ~ ^/getconfig {
-        default_type application/json;
-        if ( $query_string ~* ^(.*)v=1.03.01$ ){
-        return 200 &#39;{&quot;status&quot;: &quot;0&quot;,&quot;message&quot;: &quot;OK&quot;,&quot;body&quot;: {&quot;api&quot;:&quot;http://116.62.113.124:8080/basestock000/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8090/&quot;,&quot;phone&quot;:&quot;4000670019&quot;,&quot;cr&quot;:&quot;Copyright xxxxx&quot;}}&#39;;
-        }
-        if ( $query_string ~* ^(.*)v=1.03.02$ ){
-        return 200 &#39;{&quot;status&quot;: &quot;0&quot;,&quot;message&quot;: &quot;OK&quot;,&quot;body&quot;: {&quot;api&quot;:&quot;http://116.62.113.124:8080/basestock122/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8092/&quot;,&quot;phone&quot;:&quot;40006700191222&quot;,&quot;cr&quot;:&quot;Copyright xxxxx1222&quot;}}&#39;;
-        }
-        return 200 &#39;{&quot;status&quot;: &quot;0&quot;,&quot;message&quot;: &quot;OK&quot;,&quot;body&quot;: {&quot;api&quot;:&quot;http://116.62.113.124:8080/basestock000/&quot;,&quot;h5&quot;:&quot;http://118.31.69.127:8090/&quot;,&quot;phone&quot;:&quot;4000670019&quot;,&quot;cr&quot;:&quot;Copyright xxxxx&quot;}}&#39;;
-    }
-</code></pre><p>}<br>　　请求<a href="http://localhost:8000/getconfig?v=1.03.02：" target="_blank" rel="noopener">http://localhost:8000/getconfig?v=1.03.02：</a></p>
+<p>　　可以满足需求，当有多个参数值的时候，本人没有想出来别的更好的办法，本来以为可以使用if else或者if else if的，结果我在测试的时候配置检查都不通过，没办法就采用了下面的办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen       8000;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">        <span class="comment">#charset koi8-r;</span></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        location ~ ^/getconfig &#123;</span><br><span class="line">            default_type application/json;</span><br><span class="line">            <span class="keyword">if</span> ( <span class="variable">$query_string</span> ~* ^(.*)v=1.03.01$ )&#123;</span><br><span class="line">            <span class="built_in">return</span> 200 <span class="string">'&#123;"status": "0","message": "OK","body": &#123;"api":"http://116.62.113.124:8080/basestock000/","h5":"http://118.31.69.127:8090/","phone":"4000670019","cr":"Copyright xxxxx"&#125;&#125;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ( <span class="variable">$query_string</span> ~* ^(.*)v=1.03.02$ )&#123;</span><br><span class="line">            <span class="built_in">return</span> 200 <span class="string">'&#123;"status": "0","message": "OK","body": &#123;"api":"http://116.62.113.124:8080/basestock122/","h5":"http://118.31.69.127:8092/","phone":"40006700191222","cr":"Copyright xxxxx1222"&#125;&#125;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">return</span> 200 <span class="string">'&#123;"status": "0","message": "OK","body": &#123;"api":"http://116.62.113.124:8080/basestock000/","h5":"http://118.31.69.127:8090/","phone":"4000670019","cr":"Copyright xxxxx"&#125;&#125;'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　请求<a href="http://localhost:8000/getconfig?v=1.03.02：" target="_blank" rel="noopener">http://localhost:8000/getconfig?v=1.03.02：</a></p>
 <p>　　虽然也可以达到目的，但是感觉特别low，希望哪位大神有别的比较高端的解决方法可以指导一下 ^=^!</p>
 
     </div>
