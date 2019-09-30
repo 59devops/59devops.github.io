@@ -56,19 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。 1.通过命令行确定php.ini文件的位置1php -r &quot;phpinfo();&quot; | grep &apos;php.ini&apos; 上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。 1/usr/local/php/bin/php -r &apos;phpinfo();&apos; | grep">
+  <meta name="description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP编译安装完成之后没有&#39;php.ini&#39;文件的处理方法">
 <meta property="og:url" content="http://yoursite.com/2019/09/30/PHP编译安装完成之后没有-php-ini-文件的处理方法/index.html">
 <meta property="og:site_name" content="59Devops">
-<meta property="og:description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。 1.通过命令行确定php.ini文件的位置1php -r &quot;phpinfo();&quot; | grep &apos;php.ini&apos; 上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。 1/usr/local/php/bin/php -r &apos;phpinfo();&apos; | grep">
+<meta property="og:description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://static.staryjie.com/static/images/20190409155837.png">
-<meta property="og:updated_time" content="2019-09-30T05:49:44.858Z">
+<meta property="og:updated_time" content="2019-09-30T05:51:20.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP编译安装完成之后没有&#39;php.ini&#39;文件的处理方法">
-<meta name="twitter:description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。 1.通过命令行确定php.ini文件的位置1php -r &quot;phpinfo();&quot; | grep &apos;php.ini&apos; 上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。 1/usr/local/php/bin/php -r &apos;phpinfo();&apos; | grep">
+<meta name="twitter:description" content="在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。">
 <meta name="twitter:image" content="http://static.staryjie.com/static/images/20190409155837.png">
   <link rel="canonical" href="http://yoursite.com/2019/09/30/PHP编译安装完成之后没有-php-ini-文件的处理方法/">
 
@@ -280,7 +280,7 @@
                 
               
 
-              <time title="创建时间：2019-09-30 13:49:08 / 修改时间：13:49:44" itemprop="dateCreated datePublished" datetime="2019-09-30T13:49:08+08:00">2019-09-30</time>
+              <time title="创建时间：2019-09-30 13:49:08 / 修改时间：13:51:20" itemprop="dateCreated datePublished" datetime="2019-09-30T13:49:08+08:00">2019-09-30</time>
             </span>
           
             
@@ -313,6 +313,7 @@
 
       
         <p>在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。</p>
+<a id="more"></a>
 <h3 id="1-通过命令行确定php-ini文件的位置"><a href="#1-通过命令行确定php-ini文件的位置" class="headerlink" title="1.通过命令行确定php.ini文件的位置"></a>1.通过命令行确定<code>php.ini</code>文件的位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -r <span class="string">"phpinfo();"</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure>
 <p>上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/php/bin/php -r <span class="string">'phpinfo();'</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure>

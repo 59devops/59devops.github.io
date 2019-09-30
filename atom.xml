@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-30T05:49:44.858Z</updated>
+  <updated>2019-09-30T05:51:20.075Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="http://yoursite.com/2019/09/30/PHP%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%E6%B2%A1%E6%9C%89-php-ini-%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2019/09/30/PHP编译安装完成之后没有-php-ini-文件的处理方法/</id>
     <published>2019-09-30T05:49:08.000Z</published>
-    <updated>2019-09-30T05:49:44.858Z</updated>
+    <updated>2019-09-30T05:51:20.075Z</updated>
     
-    <content type="html"><![CDATA[<p>在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。</p><h3 id="1-通过命令行确定php-ini文件的位置"><a href="#1-通过命令行确定php-ini文件的位置" class="headerlink" title="1.通过命令行确定php.ini文件的位置"></a>1.通过命令行确定<code>php.ini</code>文件的位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -r <span class="string">"phpinfo();"</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure><p>上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/php/bin/php -r <span class="string">'phpinfo();'</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure><p><code>/usr/local/php/bin/php</code>就是PHP编译安装后所在的路径。</p><p><img src="http://static.staryjie.com/static/images/20190409155837.png" alt></p><p>如图所示，<code>php.ini</code>文件应该放在<code>/usr/local/php/lib/</code>目录下面。</p><h3 id="2-生成php-ini文件"><a href="#2-生成php-ini文件" class="headerlink" title="2.生成php.ini文件"></a>2.生成<code>php.ini</code>文件</h3><p>一般在PHP源码包中都会有现成的默认配置文件存在，只需要根据需要将他们做一定的修改即可使用。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@ggy-php ~]<span class="comment"># find /tools/php-7.1.9/ -name "php.ini*"</span></span><br><span class="line">/tools/php-7.1.9/php.ini-production</span><br><span class="line">/tools/php-7.1.9/php.ini-development</span><br><span class="line">[root@ggy-php ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure><p>通过find命令可以找到两个配置文件，一个是开发环境使用的，一个是生产环境使用的。根据自己的需要，修改配置文件并复制到<code>/usr/local/php/lib/</code>目录下，重启PHP即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp /tools/php-7.1.9/php.ini-production /usr/local/php/lib/php.ini</span><br><span class="line">killall php-fpm</span><br><span class="line">/usr/local/php/sbin/php-fpm &amp;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。</p><a id="more"></a><h3 id="1-通过命令行确定php-ini文件的位置"><a href="#1-通过命令行确定php-ini文件的位置" class="headerlink" title="1.通过命令行确定php.ini文件的位置"></a>1.通过命令行确定<code>php.ini</code>文件的位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -r <span class="string">"phpinfo();"</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure><p>上面的命令需要在编译安装完PHP之后配好了环境变量，如果没有的话需要使用绝对路径来执行。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/php/bin/php -r <span class="string">'phpinfo();'</span> | grep <span class="string">'php.ini'</span></span><br></pre></td></tr></table></figure><p><code>/usr/local/php/bin/php</code>就是PHP编译安装后所在的路径。</p><p><img src="http://static.staryjie.com/static/images/20190409155837.png" alt></p><p>如图所示，<code>php.ini</code>文件应该放在<code>/usr/local/php/lib/</code>目录下面。</p><h3 id="2-生成php-ini文件"><a href="#2-生成php-ini文件" class="headerlink" title="2.生成php.ini文件"></a>2.生成<code>php.ini</code>文件</h3><p>一般在PHP源码包中都会有现成的默认配置文件存在，只需要根据需要将他们做一定的修改即可使用。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@ggy-php ~]<span class="comment"># find /tools/php-7.1.9/ -name "php.ini*"</span></span><br><span class="line">/tools/php-7.1.9/php.ini-production</span><br><span class="line">/tools/php-7.1.9/php.ini-development</span><br><span class="line">[root@ggy-php ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure><p>通过find命令可以找到两个配置文件，一个是开发环境使用的，一个是生产环境使用的。根据自己的需要，修改配置文件并复制到<code>/usr/local/php/lib/</code>目录下，重启PHP即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cp /tools/php-7.1.9/php.ini-production /usr/local/php/lib/php.ini</span><br><span class="line">killall php-fpm</span><br><span class="line">/usr/local/php/sbin/php-fpm &amp;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。&lt;/p&gt;
-&lt;h3 id=&quot;1-通过命令行确定php-ini文件的位置&quot;&gt;&lt;a href=&quot;#1-通过命令行确定php-ini文件的位置&quot; class=&quot;headerlink&quot; 
-      
+      &lt;p&gt;在我们编译安装PHP的时候，编译安装完成是不会自动生成php.ini文件的，所以需要我们手动生成。&lt;/p&gt;
     
     </summary>
     
